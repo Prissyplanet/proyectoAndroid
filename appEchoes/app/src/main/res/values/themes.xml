@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.MyApplication" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorBackground">@color/colorBackground</item>
+        <item name="textColorPrimary">@color/textColorLight</item>
+    </style>
+    <style name="ThemeOverlay.MyApplication.TabLayout" parent="ThemeOverlay.Material3.TabLayout">
+        <item name="tabIndicatorColor">?attr/colorSecondary</item>
+        <item name="tabSelectedTextColor">?attr/textColorPrimary</item>
+        <item name="tabTextColor">?attr/textColorSecondary</item>
+    </style>
+</resources>
