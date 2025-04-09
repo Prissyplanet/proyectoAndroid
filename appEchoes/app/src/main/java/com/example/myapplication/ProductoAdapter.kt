@@ -9,8 +9,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 
 class ProductoAdapter(
-    private val productos: List<Producto>,
-    private val onItemClick: (Producto) -> Unit
+    private var productos: List<Producto>,
+    private val onItemClick: (Producto) -> Unit,
+    private val onFavClick: (Producto) -> Unit
 
 ) : RecyclerView.Adapter<ProductoAdapter.ProductoViewHolder>() {
 
@@ -18,6 +19,7 @@ class ProductoAdapter(
         val imageView: ImageView = itemView.findViewById(R.id.imageViewProducto)
         val textViewNombre: TextView = itemView.findViewById(R.id.textViewNombre)
         val textViewPrecio: TextView = itemView.findViewById(R.id.textViewPrecio)
+        val favIcon: ImageView = itemView.findViewById(R.id.favIcon)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductoViewHolder {
@@ -27,11 +29,12 @@ class ProductoAdapter(
 
     override fun onBindViewHolder(holder: ProductoViewHolder, position: Int) {
         val producto = productos[position]
-        holder.textViewNombre.text = producto.nombre
-        holder.textViewPrecio.text = "$${producto.precio}"
+        holder.textViewNombre.text = producto.name
+        holder.textViewPrecio.text = "$${producto.price}"
+        holder.favIcon.setOnClickListener { onFavClick(producto) }
 
         Glide.with(holder.itemView.context)
-            .load(producto.imagenUrl)
+            .load(producto.image_url)
             .placeholder(R.drawable.placeholder_image)
             .into(holder.imageView)
 
@@ -40,5 +43,10 @@ class ProductoAdapter(
 
     override fun getItemCount(): Int {
         return productos.size
+    }
+
+    fun actualizarLista(nuevaLista: List<Producto>) {
+        this.productos = nuevaLista
+        notifyDataSetChanged()
     }
 }

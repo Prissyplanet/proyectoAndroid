@@ -11,16 +11,13 @@
         android:id="@+id/tabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:tabIndicatorColor="?attr/colorSecondary"
-        app:tabSelectedTextColor="?attr/textColorPrimary"
-        app:tabTextColor="?attr/textColorSecondary"
-        app:tabBackground="?attr/colorBackground"
-        android:theme="@style/ThemeOverlay.MyApplication.TabLayout"
+        android:background="?attr/colorPrimary"
+        app:tabSelectedTextColor="@color/white"
+        android:contentDescription="@string/tab_layout_description"
+        app:tabTextColor="@color/gray"
+        app:tabIndicatorColor="@color/white"
         app:tabMode="fixed"
-        app:tabGravity="fill"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPager"

@@ -4,12 +4,14 @@ import android.os.Parcel
 import android.os.Parcelable
 
 data class Producto(
-    val nombre: String,
-    val precio: Double,
-    val imagenUrl: String,
-    val descripcion: String
+    val id: Int,
+    val name: String,
+    val price: Double,
+    val image_url: String,
+    val description: String
 ) : Parcelable {
     constructor(parcel: Parcel) : this(
+        parcel.readInt(),
         parcel.readString()!!,
         parcel.readDouble(),
         parcel.readString()!!,
@@ -17,10 +19,11 @@ data class Producto(
     )
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
-        parcel.writeString(nombre)
-        parcel.writeDouble(precio)
-        parcel.writeString(imagenUrl)
-        parcel.writeString(descripcion)
+        parcel.writeInt(id)
+        parcel.writeString(name)
+        parcel.writeDouble(price)
+        parcel.writeString(image_url)
+        parcel.writeString(description)
     }
 
     override fun describeContents(): Int {

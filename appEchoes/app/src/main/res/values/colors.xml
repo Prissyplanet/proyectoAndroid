@@ -1,17 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+    <!--Light Mode-->
     <color name="colorPrimary">#36405C</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
     <color name="colorSecondary">#D35542</color>
+    <color name="colorOnSecondary">#FFFFFF</color>
     <color name="colorBackground">#EBEAC6</color>
+    <color name="colorSurface">#FFFFFF</color>
     <color name="colorAccent">#DEBA8D</color>
 
+    <!-- Dark Mode -->
     <color name="colorPrimaryDark">#1E2A3A</color>
+    <color name="colorOnPrimaryDark">#EBEAC6</color>
     <color name="colorSecondaryDark">#A84334</color>
     <color name="colorBackgroundDark">#1A1A1A</color>
+    <color name="colorSurfaceDark">#2D2D2D</color>
     <color name="colorAccentDark">#B89A6D</color>
 
-
+    <!-- Textos -->
     <color name="textColorLight">#36405C</color>
+    <color name="textColorSecondaryLight">#606060</color>
     <color name="textColorDark">#FFFFFF</color>
+    <color name="textColorSecondaryDark">#B0B0B0</color>
+
+    <color name="purple_500">#6200EE</color>
+    <color name="black">#FF000000</color>
+    <color name="gray">#808080</color>
+    <color name="teal_200">#03DAC5</color>
+    <color name="white">#FFFFFF</color>
+    <color name="red">#FF0000</color>
 </resources>

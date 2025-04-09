@@ -20,6 +20,14 @@
             android:scaleType="centerCrop"
             android:src="@drawable/reloj"/>
 
+        <ImageView
+            android:id="@+id/favIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="end"
+            android:src="@drawable/ic_fav_empty"
+            android:contentDescription="@string/fav_icon_desc"/>
+
         <TextView
             android:id="@+id/textViewNombre"
             android:layout_width="wrap_content"

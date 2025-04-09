@@ -21,13 +21,13 @@ class DetalleProductoActivity : AppCompatActivity() {
 
         if (producto != null) {
 
-            binding.textViewNombreDetalle.text = producto.nombre
-            binding.textViewPrecioDetalle.text = "$${producto.precio}"
-            binding.textViewDescripcionDetalle.text = producto.descripcion
+            binding.textViewNombreDetalle.text = producto.name
+            binding.textViewPrecioDetalle.text = "$${producto.price}"
+            binding.textViewDescripcionDetalle.text = producto.description
 
 
             Glide.with(this)
-                .load(producto.imagenUrl)
+                .load(producto.image_url)
                 .placeholder(R.drawable.placeholder_image)
                 .into(binding.imageViewDetalle)
         }

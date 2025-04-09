@@ -1,11 +1,21 @@
 <resources>
     <style name="Theme.MyApplication" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">#a46ede</item>
+        <item name="colorSecondary">#bcf5f5</item>
+        <item name="colorOnPrimary">#000000</item>
+        <item name="android:statusBarColor">?attr/colorPrimary</item>
+
+
         <item name="colorBackground">@color/colorBackgroundDark</item>
         <item name="textColorPrimary">@color/textColorDark</item>
+        <item name="textColorSecondary">#D3D3D3</item>
+        <item name="tabStyle">@style/Widget.MyApplication.TabLayout</item>
+        <item name="tabIndicatorColor">@color/white</item>
+
+
     </style>
-    <style name="ThemeOverlay.MyApplication.TabLayout" parent="ThemeOverlay.Material3.TabLayout">
-        <item name="tabIndicatorColor">?attr/colorSecondary</item>
-        <item name="tabSelectedTextColor">?attr/textColorPrimary</item>
-        <item name="tabTextColor">?attr/textColorSecondary</item>
+    <style name="Widget.MyApplication.TabLayout" parent="Widget.Material3.TabLayout">
+    <item name="tabIndicatorColor">@color/white</item>
+    <item name="tabSelectedTextColor">@color/white</item>
     </style>
 </resources>

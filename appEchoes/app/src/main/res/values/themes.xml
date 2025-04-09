@@ -1,12 +1,17 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
     <style name="Theme.MyApplication" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="android:statusBarColor">?attr/colorPrimary</item>
+        <item name="tabStyle">@style/Widget.MyApplication.TabLayout</item>
+        <item name="tabIndicatorColor">@color/white</item>
         <item name="colorBackground">@color/colorBackground</item>
         <item name="textColorPrimary">@color/textColorLight</item>
+        <item name="textColorSecondary">#808080</item>
     </style>
-    <style name="ThemeOverlay.MyApplication.TabLayout" parent="ThemeOverlay.Material3.TabLayout">
-        <item name="tabIndicatorColor">?attr/colorSecondary</item>
-        <item name="tabSelectedTextColor">?attr/textColorPrimary</item>
-        <item name="tabTextColor">?attr/textColorSecondary</item>
+    <style name="Widget.MyApplication.TabLayout" parent="Widget.Material3.TabLayout">
+        <item name="tabIndicatorColor">@color/white</item>
+        <item name="tabSelectedTextColor">@color/white</item>
     </style>
 </resources>
